@@ -1,0 +1,44 @@
+/mi_sistema_fichaje
+├── index.php                     ← Página principal de fichaje
+├── registrar_fichaje.php        ← Lógica de entrada/salida
+│
+├── add_personal.php             ← Formulario para agregar personal
+├── insert_personal.php          ← Procesa y guarda nuevo personal
+├── listar_personal.php          ← Lista todos los empleados
+├── edit_personal.php            ← Formulario de edición de datos
+├── update_personal.php          ← Guarda cambios del personal
+├── delete_personal.php          ← Elimina un registro
+│
+├── ver_registro.php             ← Consultar fichajes por fecha
+├── exportar_personal.php        ← Exportar registros como CSV
+│
+├── db.php                       ← Conexión a la base de datos
+├── /images/                     ← Fotos de personal
+│     └── random.jpg             ← Imagen por defecto si no se sube foto
+└── /css/ (opcional)             ← Archivos de estilos personalizados
+
+
+
+--------------------------------------------------------------------------
+BASE DE DATOS: fichaje_db
+
+CREATE TABLE personal (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    apellido VARCHAR(100),
+    direccion TEXT,
+    telefono VARCHAR(20),
+    mail VARCHAR(100),
+    numerointerno VARCHAR(20) UNIQUE,
+    seccion VARCHAR(50),
+    foto VARCHAR(255) DEFAULT 'random.png'
+);
+
+CREATE TABLE fichaje (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    personal_id INT,
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    tipo ENUM('entrada', 'salida'),
+    FOREIGN KEY (personal_id) REFERENCES personal(id)
+);
+
