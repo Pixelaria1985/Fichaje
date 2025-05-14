@@ -1,0 +1,19 @@
+
+Eres un programador profesional con varios años de experiencia en programacion en php y un experimentado en base de datos especificamente en mysql y necesito un sistema de fichaje de personal
+
+- Debe de existir una pagina en donde cargar al personal con los datos de Nombre, Apellido, Direccion, Telefono, Mail, NumeroInterno, Seccion y Foto.
+
+- Luego debe haber una pagina en donde el personal ponga su NumeroInterno y en la pantalla se imprima si entro o salio el nombre y el apellido de la persona y la foto que cuando entra diga entro en verde y cuando sale diga salio en rojo.
+
+- Luego una pagina para consultar los registros a trave de insertar la fecha y un registro del dia, que tengan la opcion de poder descargar en un excel la planillas de ese dia seleccionado.
+
+- Luego una pagina en donde esten todos los personales registrados en una tabla y que al lado de cada personal haya dos botones uno de eliminar el personal y otro de modificar los datos del personal, cuando se presione ese boton me lleve a otra pagina en donde pueda modificar los datos al presionar guardar me guarde los cambios y me vuelva a la pagina donde estan todos los registros o si presiono el boton de volver me vuelva a la pagina donde estan todos los registros
+
+- Quiero que la conexion de la base de datos este en una pagina aparte. (ej: db.php)
+
+- Quiero que cuando no se agregue una foto en la carga de personal utilice la imagen que va a estar en la carpeta images la imagen se va a llamar random.php, ademas quiero que todas las fotos se depositen en esta carpeta y que la base de datos la llame de ahi.
+
+- Quiero usar estilos bootstrap.
+
+
+
